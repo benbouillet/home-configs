@@ -52,7 +52,8 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,8 +87,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # fpath=(/usr/local/share/zsh-completions)
 
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
-
 alias todo='~/Installs/todo-txt/todo.sh'
 export TODOTXT_DEFAULT_ACTION=ls
-compdef _todo todo
+compdef todo.sh
