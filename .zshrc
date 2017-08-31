@@ -90,5 +90,4 @@ plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew
 
 alias todo='~/Installs/todo-txt/todo.sh'
 export TODOTXT_DEFAULT_ACTION=ls
-source todo_completion
-complete -F _todo t
+compdef _todo todo
