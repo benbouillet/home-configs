@@ -90,3 +90,7 @@ source $ZSH/oh-my-zsh.sh
 alias todo='~/Installs/todo-txt/todo.sh'
 export TODOTXT_DEFAULT_ACTION=ls
 compdef todo.sh
+bindkey -v
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
