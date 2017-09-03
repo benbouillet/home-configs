@@ -94,3 +94,13 @@ bindkey -v
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
+# Vi-mode display
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/ [NORMAL]}/(main|viins)/ [INSERT]}”
+    RPS2=$RPS1
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
