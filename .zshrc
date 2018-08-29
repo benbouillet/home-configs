@@ -10,6 +10,7 @@ export ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="pygmalion"
 # ZSH_THEME="agnoster"
 ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs vi_mode time)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,24 +92,22 @@ source $ZSH/oh-my-zsh.sh
 alias todo='~/Installs/todo-txt/todo.sh'
 export TODOTXT_DEFAULT_ACTION=ls
 compdef todo.sh
-<<<<<<< HEAD
 
 alias py=python3
 
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-=======
+
 bindkey -v
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
 # Vi-mode display
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/ [NORMAL]}/(main|viins)/ [INSERT]}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
+# function zle-line-init zle-keymap-select {
+#    RPS1="${${KEYMAP/vicmd/ [NORMAL]}/(main|viins)/ [INSERT]}"
+#    RPS2=$RPS1
+#    zle reset-prompt
+# }
 
 zle -N zle-line-init
 zle -N zle-keymap-select
->>>>>>> e2c59d3e08c7feae98ece31cc0186b84374c0566
