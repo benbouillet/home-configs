@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ben/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -91,7 +91,24 @@ source $ZSH/oh-my-zsh.sh
 alias todo='~/Installs/todo-txt/todo.sh'
 export TODOTXT_DEFAULT_ACTION=ls
 compdef todo.sh
+<<<<<<< HEAD
 
 alias py=python3
 
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+=======
+bindkey -v
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+
+# Vi-mode display
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/ [NORMAL]}/(main|viins)/ [INSERT]}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+>>>>>>> e2c59d3e08c7feae98ece31cc0186b84374c0566
