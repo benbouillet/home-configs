@@ -8,7 +8,8 @@ export ZSH=/Users/ben/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="pygmalion"
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -30,7 +31,7 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -90,3 +91,7 @@ source $ZSH/oh-my-zsh.sh
 alias todo='~/Installs/todo-txt/todo.sh'
 export TODOTXT_DEFAULT_ACTION=ls
 compdef todo.sh
+
+alias py=python3
+
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
